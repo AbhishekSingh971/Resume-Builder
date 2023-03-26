@@ -1,0 +1,298 @@
+const BasicInformation = () => {
+  const { control } = useFormContext();
+  return (
+    <div className="container p-5">
+      <div className="row">
+        <controller
+          control={control}
+          name="name"
+          render={(field) => {
+            <TextField
+              className="col-5 me-3"
+              id="name"
+              label="First Name"
+              placeholder="Enter Your First Name"
+              margin="normal"
+              // name="name"
+              {...field}
+            />
+          }} />
+        <controller
+          control={control}
+          name="lastName"
+          render={(field) => {
+            <TextField
+              className="col-6"
+              id="lastName"
+              label="Last Name"
+              placeholder="Enter Your Last Name"
+              margin="normal"
+              // name="lastName"
+              {...field}
+            />
+          }} />
+      </div>
+
+      <div className="row">
+        <controller
+          control={control}
+          name="jobTitle"
+          render={(field) => {
+            <TextField
+              style={{ width: "95%" }}
+              id="jobTitle"
+              label="Job Title"
+              placeholder="Enter Your Job Title"
+              // fullWidth
+              margin="normal"
+              name="jobTitle"
+              {...field}
+            />
+          }} />
+      </div>
+      <div className="row">
+        <controller
+          control={control}
+          name="address"
+          render={(field) => {
+            <TextField
+              style={{ width: "95%" }}
+              id="address"
+              label="Address"
+              placeholder="Enter Your Address"
+              // fullWidth
+              margin="normal"
+              // name="address"
+              {...field}
+            />
+          }} />
+      </div>
+      <div className="row">
+        <controller
+          control={control}
+          name="city"
+          render={(field) => {
+            <TextField
+              className="col-4 me-2"
+              id="city"
+              label="City"
+              placeholder="Enter Your City"
+              margin="normal"
+              {...field}
+            />
+          }} />
+        <controller
+          control={control}
+          name="state"
+          render={(field) => {
+            <TextField
+              className="col-3 me-2"
+              id="state"
+              label="State"
+              placeholder="Enter Your State"
+              margin="normal"
+              {...field}
+            />
+          }} />
+        <controller
+          control={control}
+          name="zipCode"
+          render={(field) => {
+            <TextField
+              className="col-4"
+              id="zipCode"
+              label="Zip Code"
+              placeholder="Enter Your Zip Code"
+              margin="normal"
+              {...field}
+            />
+          }} />
+      </div>
+      <div className="row">
+        <controller
+          control={control}
+          name="phone"
+          render={(field) => {
+            <TextField
+              className="col-5 me-3"
+              id="phone"
+              label="Phone Number"
+              placeholder="Enter Your Phone Number"
+              margin="normal"
+              {...field}
+            />
+          }} />
+        <controller
+          control={control}
+          name="email"
+          render={(field) => {
+            <TextField
+              className="col-6"
+              id="email"
+              label="Email"
+              placeholder="Enter Your Email"
+              margin="normal"
+              {...field}
+            />
+          }} />
+      </div>
+    </div>
+  )
+}
+const ContactInformation = () => {
+  const { control } = useFormContext();
+  return (
+    <>
+        <Controller
+        control={control}
+        name="emailAddress"
+        render={({ field }) => (
+          <TextField
+            id="email"
+            label="E-mail"
+            variant="outlined"
+            placeholder="Enter Your E-mail Address"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+
+      <Controller
+        control={control}
+        name="phoneNumber"
+        render={({ field }) => (
+          <TextField
+            id="phone-number"
+            label="Phone Number"
+            variant="outlined"
+            placeholder="Enter Your Phone Number"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="alternatePhone"
+        render={({ field }) => (
+          <TextField
+            id="alternate-phone"
+            label="Alternate Phone"
+            variant="outlined"
+            placeholder="Enter Your Alternate Phone"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+    </>
+  )
+}
+const PersonalInformation = () => {
+  const { control } = useFormContext();
+  return (
+    <>
+        <Controller
+        control={control}
+        name="address1"
+        render={({ field }) => (
+          <TextField
+            id="address1"
+            label="Address 1"
+            variant="outlined"
+            placeholder="Enter Your Address 1"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="address2"
+        render={({ field }) => (
+          <TextField
+            id="address2"
+            label="Address 2"
+            variant="outlined"
+            placeholder="Enter Your Address 2"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="country"
+        render={({ field }) => (
+          <TextField
+            id="country"
+            label="Country"
+            variant="outlined"
+            placeholder="Enter Your Country Name"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+    </>
+  )
+}
+const Payment = () => {
+  const { control } = useFormContext();
+  return (
+    <>
+       <Controller
+        control={control}
+        name="cardNumber"
+        render={({ field }) => (
+          <TextField
+            id="cardNumber"
+            label="Card Number"
+            variant="outlined"
+            placeholder="Enter Your Card Number"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="cardMonth"
+        render={({ field }) => (
+          <TextField
+            id="cardMonth"
+            label="Card Month"
+            variant="outlined"
+            placeholder="Enter Your Card Month"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="cardYear"
+        render={({ field }) => (
+          <TextField
+            id="cardYear"
+            label="Card Year"
+            variant="outlined"
+            placeholder="Enter Your Card Year"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+    </>
+  )
+}
